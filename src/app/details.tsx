@@ -19,16 +19,14 @@ export default function Details() {
 
   return (
     <ScrollView style={styles.container}>
-      {/* Product Image */}
       <View style={styles.imageContainer}>
         <Image
           style={styles.image}
           source={{ uri: parsedProduct.imageUrl }}
-          resizeMode="contain" // Better scaling for product images
+          resizeMode="contain" 
         />
       </View>
 
-      {/* Product Details */}
       <View style={styles.detailsContainer}>
         <Text style={styles.name}>{parsedProduct.name}</Text>
         <Text style={styles.rating}>{parsedProduct.rating} ★</Text>
@@ -39,7 +37,6 @@ export default function Details() {
         <Text style={styles.offer}>Save: {parsedProduct.offerPercentage}%</Text>
       </View>
 
-      {/* Product Tags */}
       <View style={styles.tagsContainer}>
         {parsedProduct.tags.map((tag: string, index: number) => (
           <Text key={index} style={styles.tag}>
